@@ -19,7 +19,6 @@ form.addEventListener('submit', async (event) => {
 
   gallery.innerHTML = '';
   loader.style.display = 'block';
-
   try {
     const data = await fetchImages(query);
     if (data.hits.length === 0) {
@@ -30,6 +29,6 @@ form.addEventListener('submit', async (event) => {
   } catch (error) {
     iziToast.error({ title: 'Error', message: 'Failed to fetch images. Try again later.' });
   } finally {
-    loader.style.display = 'none';
+    loader.style.display = 'none'; 
   }
 });
